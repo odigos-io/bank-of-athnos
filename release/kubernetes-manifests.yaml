@@ -1,0 +1,808 @@
+apiVersion: v1
+data:
+  jwtRS256.key: LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlKS3dJQkFBS0NBZ0VBNEd2Wk5Ta2o1aWlXYjJEWk0yZkN4NWJHR1lnd2FLNFNNc3lJOEs4b0ZRZXBMMTNZClJPWEt3NVMrbEVMSDlBZXRUZGNUQWRrYkN6eWFwU2RrM1Bxd3hoQ2FmNGtudktlUmk3NmNzRzZtYzBrcngxR0kKdFk2NVgrTnEwcWFSdkxkT09iRlFHbUlIeDc1emtaNjU0K2Z0dm52Q1k1T1BqVjQ0TGt0dTF3bHJCbXIyMjVRUwpGYklhOEE5NkJTcEp6S20wYWhLKzZyOFZ2dk9xMUJIR1pJSUtLR1E3L3pMdXhQT24rYzN3Q0YwVlFZMjBZNFhvCm8rRFZ0LyswTUk4T1p2ZEF1YWIyVVh1YitUaXdBZ0c3Njh5bkpQaDdla2xMdGR0QTFCR2dsWG1vRVI0eHZoaFgKUXNPUnRUaTYwRlpQWDdDM1YxcmxVZStyVTlCWTZDbHJXbGVKdGdCZjFYUi90Qm1MZGZCNFlWbkt0ekI3dkxDbApPS3VsdGFkdVNWbmZ2OEMwdXoxelBCWkl3WG5zVk83WHlTVlBBSkJUOFBWR1Iza2JnOW5FRGsvclZsS1lNSW5EClNPOFNITnlLTytrNnBUaG1hbW9xTUJKQkNwY0MrRzFVUFVxWWV1Szh3NjZaU3BLV2ZQY3RtWWViUHNraUpiS2UKT3JIVlUyRGo3enpkaW1MMmJlaHFTd1NpM3pBa2xXZjRGU0F6aC80enBENFdxM0lDd2NYbFBxYTU5T0IwcXFBQwp4NUFtRUZsdlF1VUkwcTZ3WjZ2cmxBWUsrTWRtNER2RkFVbFhzNW1mbDZPRnZ0YkZTZHF1ckU2SXROVnlSVlFBCmx6WFdtaEM4R3JXQklodDFPSkxXREtPNWx2Wm1KUS9sazdic1VyNCsyK05ObnNzTXBuTUI2QytJejZzQ0F3RUEKQVFLQ0FnRUFoQ0c3ZnpzN3NiVlA3VCsrWWkvRFZMUUc2dDF1Y3hPYUQyS3hkZFFLNjJiWlM5UWJFMldnWGtyagpjbk5uT3R5U1F2UlFjcFFiQWlDcWhIYVBRalF2aEU0ZVNOeStFcXN1WEhMYjJsMHJqMUVUZjRVWDBwMjNzeWM0CnE5SDZtSHZzaUxkSERHR1BaeUZROWZuWVJNRTNEeUhhcjdvZm1RSlNYWjk0SVErZ2ZlVFlkeXZWQWdVZEt4NVIKbjF6b21xR0lZYk9yeUphOC9QS0dMOXBQVHJucHRTSmUyTUJxS0hlMC9MVXRrQjhOOXN5eDJxN3E3Q0hpY3pVUQpLRTd5RWRtZHVERC9jYll2ZlNyTkprRlRIV0FmUVBzejZDbmpjNjBsbkRiTXIzVXphUEM0Sk00OEFra1hMdlc1CnVCUTVJNFB1VG5acjhqUUVVWktuNWZrTkJlSG9aNjlZVVp2eWdOcGJRaVMxWi9CRzYwVDVZN1VPY09wWVJ2bCsKL0dSNUFSNnpZQVJKbTBKNmg3U2NsdGhLSjdaVnFldWV5U3B1UG9mTjg0V241Zm1mbWdsR2F0dlc4KzFGR2ZNRQppWGxHbzhHQ1ZyampzN013a0pMT3Jlc0lRblFWK3ZmWC95Nk9WRExMS21yeGJCT3BPcm5TK01icnFoOXBsRGFICks1N0VOVngzWWxVd2M3bFRHd2Q2cS9nVnhSWDZRc1F3VEl5UHVOOUozMWd0dXRCeS9FTVVGc1hJenJhRmRIQzgKZXVlT1N3V0JQT05XbUkzN1BCVTIycXFyMWE3d1Y3Z0lJOGg3WS8waDNDYjFYWjZsQ2FzOCt0emI3VFZNMGxWQwpINWNYaXRqM2xKS1B1b2VzOXpTNFhEQjQ0V1hwZkw4SFVXQ1NuSWF2ZVJYUHhwbDRJbUVDZ2dFQkFQMjJEZml3CmVaRDBSTzlManJSR2cxODJlNnNSZ052VUQrOTFjUnBRNFBDcnlKQm1tTmNWOFBNZVdoZFlPaHdCWW1JMjkyWkkKcjFyeHVwclBCdE43dTNnWmhKYkVXL1IvSFozc2lPSmNycHlhejBVNUpDSzRTOERSbkdnUUdOQUdJNFlsVUNxNwpLL2JOa0JLcnRpSEVpOWV6RGQ3SjIrRGJGK0FiSXNWdlNnNnNHdEp1TG8rY0VRUzFaNzkycTQ5NUt6dWJyUDhvClVIbWFuc1R1ZEtLL1lZY0dlcU9pS2V0bmgrK0ZUc0hXek1NTEJ3VllySVlZRHZ5RWUvZEFkNWUzM3ZTRSsrbXkKZEVaVkZidVRMQmdzSW4wM0dmZ1pnNE56QkNhSm9NZGJtU3NiaUxGMkRTL1g4eXNKNldLYzdVTFMwMXJwSjBLTgo0VldQNjhiZlZOd1YwbmtDZ2dFQkFPSnlKaVN5aGJrL1hEVjRzT2ZLS1BBQ3RJTkN0ZWk2OWpYVVVOUHNhQndNCjFMNURCOU5tNjhLb3piVTN1Rk9QbmRPZERrMms5cm5WS1JkSlYrTHhPQ2NEdE5aMzlGQ3JtbUs3TGc4TnBUM2cKVksxc29YamFtcGI3NU1LWjZzaGFIUDRFUUMvTVVoeVF1UXkydEtUS3JMYUNFRmdzR1RhRHFaOU9xMVdIZzhWNwoxdUkzak8xYnNzNFRQWjJxbXVOYjE0WEMzQnJaeDE4eWY3MnJZMEk5RTAxdXorUmp4VUdSK0E3dlloSklYVWtMCmtzQTJqV1ludktsVmZRRWJpWlVpcjQ0d2IraEZ4Z3JwcVBvSmNCTzgvdS9UYXZ3MjFqbjFkRys3NWZqZnI5M3UKRjExbUh2VVY2Z0RJenN4NDVicDVDek5oUmdTTHNRZk9INFdpdytIcUNrTUNnZ0VCQU1UZGtFZkpmL3IzWDhvaQo0ZStHeTRlRStqOEtqT2VHekhxdHNYNlBCWXdhYjcyRXJ0SXV4MUdPMnE5RW1ZcURsSGpMVi9zNUtVQXpVKzJ0CitRaisrTCsvWlQrcnpBS1M1RU5YZC92Vm1QUVJ1QVZweWwxYWpnVm5ZS3JxMnFZSUxXWjQ2NVRNdWRkL09HMFUKYW5ZWFViK2t3MzE5T3ExbXRFY0VKMTMxOWd3ZWhZMkZTNEhKd3ZiWllGQ1QzNW1ybHQxZzljTGo0RllMb1drRAo4dU1hQjY1RFc4US9IN0gzR3ViRGxSSVovN2JVaHJVaVVuU1dsSUppdHVKclZxRVdYdDF6bHhtR2pHekt0dHRlCjNwYy9IOS96Y3FZdC9mdHdzdWJJWWtadkVCSUFBbmhaTnZCSjYva1liczFESVdONXZlRE1DOWU3eWY2ZmQzOVEKYWtPQWQxa0NnZ0VCQUpCQ2RraFVydHBJSWg4eWgwanpRa2M5QWZESlZBZ3k2MTE1cUJDS2YveTJzK1dONEhOdQpFdTROQ2hmVHFvc1phRXVDdDdVQlRla3ZnaUVDcVltN2NMRnlMQWVobmJTeXpnVHVDRGF3MDc5cXBhZGlHREJjCjI3VXFQaDgzWFJwTVJrSVJSUzd1TkxWY0FYZTNBYmdtSWdlWExvQnRmNVo2SkZxSURLRE5WMFk5VWJVRi9MTE8KQTBoRGU3SnhHSUdWWmVVaU1ZU3RqdFQzMytkZVF6clVtL0p0a09XSUpnZFN6YnYrQnZWc3dua2hkVmtjcDlJWApxSm9jQ3lua2VDN1pUUXdCa1psZ3NmMEx4SW1kNzVlemhKb1dqd2FraksrWnpwYk1Gb01KUmduVmYyOFIrdERhCktCeGQwVmowQUM1ZXBLTVQ2ajVGRy8vRDhkTDUwVjZmOGU4Q2dnRUJBTWgreklJb3FKZWlXTGgzOUFtTTRQZEkKSFNod0lISXBUNUhGS05jOTFzRnRDZFdXVDIweXVPZHNLZU9TTDZjMjJsVFpjcklFZFlDY0Q5SVhyWm8xVmxXOAorSGFmNDFhcHhlaU1PZVBNR3ZlNEQ2ZEdrUXcyWXBuNXlOQUUwYk1qa1hFU3JuMzMvV3JqSFFtWFdvNmFSdnVZCnkrMktzbGwvK1BzajlwNXd3WVYxRGp0QzFXU0lmdFZNMkJuRlViQVVyMmNHSVNXWlNnWU9yUDU1elZKK3REeloKSXhrMDZ6TUNZU3pEL1pPTUJZSjUvTFFPWnlPUUs0R2xnMytUUUNXUERHNTRtUEo0dElmNUZCZ25wSU5QRGNLQwpLc2RTQlg4S0xNeU83aEVzOCtuZFRWNWlxa0pscGNCdVJ3VXVUSmlFakc0MWZnaXZPVThTR0V5elZPbW1NNG89Ci0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg==
+  jwtRS256.key.pub: LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUlJQ0lqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FnOEFNSUlDQ2dLQ0FnRUE0R3ZaTlNrajVpaVdiMkRaTTJmQwp4NWJHR1lnd2FLNFNNc3lJOEs4b0ZRZXBMMTNZUk9YS3c1UytsRUxIOUFldFRkY1RBZGtiQ3p5YXBTZGszUHF3CnhoQ2FmNGtudktlUmk3NmNzRzZtYzBrcngxR0l0WTY1WCtOcTBxYVJ2TGRPT2JGUUdtSUh4NzV6a1o2NTQrZnQKdm52Q1k1T1BqVjQ0TGt0dTF3bHJCbXIyMjVRU0ZiSWE4QTk2QlNwSnpLbTBhaEsrNnI4VnZ2T3ExQkhHWklJSwpLR1E3L3pMdXhQT24rYzN3Q0YwVlFZMjBZNFhvbytEVnQvKzBNSThPWnZkQXVhYjJVWHViK1Rpd0FnRzc2OHluCkpQaDdla2xMdGR0QTFCR2dsWG1vRVI0eHZoaFhRc09SdFRpNjBGWlBYN0MzVjFybFVlK3JVOUJZNkNscldsZUoKdGdCZjFYUi90Qm1MZGZCNFlWbkt0ekI3dkxDbE9LdWx0YWR1U1ZuZnY4QzB1ejF6UEJaSXdYbnNWTzdYeVNWUApBSkJUOFBWR1Iza2JnOW5FRGsvclZsS1lNSW5EU084U0hOeUtPK2s2cFRobWFtb3FNQkpCQ3BjQytHMVVQVXFZCmV1Szh3NjZaU3BLV2ZQY3RtWWViUHNraUpiS2VPckhWVTJEajd6emRpbUwyYmVocVN3U2kzekFrbFdmNEZTQXoKaC80enBENFdxM0lDd2NYbFBxYTU5T0IwcXFBQ3g1QW1FRmx2UXVVSTBxNndaNnZybEFZSytNZG00RHZGQVVsWApzNW1mbDZPRnZ0YkZTZHF1ckU2SXROVnlSVlFBbHpYV21oQzhHcldCSWh0MU9KTFdES081bHZabUpRL2xrN2JzClVyNCsyK05ObnNzTXBuTUI2QytJejZzQ0F3RUFBUT09Ci0tLS0tRU5EIFBVQkxJQyBLRVktLS0tLQo=
+kind: Secret
+metadata:
+  name: jwt-key
+  namespace: default
+type: Opaque
+---
+apiVersion: v1
+data:
+  LOCAL_ROUTING_NUM: "883745000"
+  PUB_KEY_PATH: /tmp/.ssh/publickey
+kind: ConfigMap
+metadata:
+  name: environment-config
+  namespace: default
+---
+apiVersion: v1
+data:
+  BALANCES_API_ADDR: balancereader:8080
+  CONTACTS_API_ADDR: contacts:8080
+  HISTORY_API_ADDR: transactionhistory:8080
+  TRANSACTIONS_API_ADDR: ledgerwriter:8080
+  USERSERVICE_API_ADDR: userservice:8080
+kind: ConfigMap
+metadata:
+  name: service-api-config
+  namespace: default
+---
+apiVersion: v1
+data:
+  DEMO_LOGIN_PASSWORD: bankofanthos
+  DEMO_LOGIN_USERNAME: testuser
+  USE_DEMO_DATA: "True"
+kind: ConfigMap
+metadata:
+  name: demo-data-config
+  namespace: default
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    app: accounts-db
+    tier: db
+  name: accounts-db
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: accounts-db
+      tier: db
+  serviceName: accounts-db
+  template:
+    metadata:
+      labels:
+        app: accounts-db
+        tier: db
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: environment-config
+        - configMapRef:
+            name: accounts-db-config
+        - configMapRef:
+            name: demo-data-config
+        image: edenfed/accounts-db:f5f76ca@sha256:6c468b93a99eb135d912ea9cac394928ef9b0f3f323ec25b0b1e26feafa03e6c
+        name: accounts-db
+        ports:
+        - containerPort: 5432
+          name: postgredb
+        resources:
+          limits:
+            cpu: 250m
+            memory: 512Mi
+          requests:
+            cpu: 100m
+            memory: 128Mi
+        volumeMounts:
+        - mountPath: /var/lib/postgresql/data
+          name: postgresdb
+          subPath: postgres
+      serviceAccountName: default
+      volumes:
+      - emptyDir: {}
+        name: postgresdb
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: accounts-db
+    tier: db
+  name: accounts-db
+  namespace: default
+spec:
+  ports:
+  - name: tcp
+    port: 5432
+    protocol: TCP
+    targetPort: 5432
+  selector:
+    app: accounts-db
+    tier: db
+---
+apiVersion: v1
+data:
+  ACCOUNTS_DB_URI: postgresql://accounts-admin:accounts-pwd@accounts-db:5432/accounts-db
+  POSTGRES_DB: accounts-db
+  POSTGRES_PASSWORD: accounts-pwd
+  POSTGRES_USER: accounts-admin
+kind: ConfigMap
+metadata:
+  labels:
+    app: accounts-db
+  name: accounts-db-config
+  namespace: default
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: ledger-db
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ledger-db
+  serviceName: ledger-db
+  template:
+    metadata:
+      labels:
+        app: ledger-db
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: environment-config
+        - configMapRef:
+            name: ledger-db-config
+        - configMapRef:
+            name: demo-data-config
+        image: edenfed/ledger-db:f5f76ca@sha256:7c80749e25acf46e6d448ba969b24b8fd89fd9eef8482b979a37e322ec19721f
+        name: postgres
+        ports:
+        - containerPort: 5432
+        resources:
+          limits:
+            cpu: 250m
+            memory: 1Gi
+          requests:
+            cpu: 100m
+            memory: 512Mi
+        volumeMounts:
+        - mountPath: /var/lib/postgresql/data
+          name: postgresdb
+          subPath: postgres
+      serviceAccountName: default
+      volumes:
+      - emptyDir: {}
+        name: postgresdb
+---
+apiVersion: v1
+data:
+  POSTGRES_DB: postgresdb
+  POSTGRES_PASSWORD: password
+  POSTGRES_USER: admin
+  SPRING_DATASOURCE_PASSWORD: password
+  SPRING_DATASOURCE_URL: jdbc:postgresql://ledger-db:5432/postgresdb
+  SPRING_DATASOURCE_USERNAME: admin
+kind: ConfigMap
+metadata:
+  labels:
+    app: postgres
+  name: ledger-db-config
+  namespace: default
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ledger-db
+  namespace: default
+spec:
+  ports:
+  - name: tcp
+    port: 5432
+    targetPort: 5432
+  selector:
+    app: ledger-db
+  type: ClusterIP
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: balancereader
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: balancereader
+  template:
+    metadata:
+      labels:
+        app: balancereader
+    spec:
+      containers:
+      - env:
+        - name: VERSION
+          value: dev
+        - name: PORT
+          value: "8080"
+        - name: ENABLE_TRACING
+          value: "true"
+        - name: ENABLE_METRICS
+          value: "true"
+        - name: POLL_MS
+          value: "100"
+        - name: CACHE_SIZE
+          value: "1000000"
+        - name: JVM_OPTS
+          value: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap
+            -Xms256m -Xmx512m
+        - name: LOG_LEVEL
+          value: info
+        - name: NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        envFrom:
+        - configMapRef:
+            name: environment-config
+        - configMapRef:
+            name: ledger-db-config
+        image: edenfed/balancereader:f5f76ca-dirty@sha256:145166db967694e46160cc8379331d8b7cb613e919f275525d9517f723ecb468
+        name: balancereader
+        resources:
+          limits:
+            cpu: 500m
+            memory: 512Mi
+          requests:
+            cpu: 100m
+            memory: 256Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - all
+          privileged: false
+          readOnlyRootFilesystem: true
+        volumeMounts:
+        - mountPath: /tmp/.ssh
+          name: publickey
+          readOnly: true
+        - mountPath: /tmp
+          name: tmp
+      securityContext:
+        fsGroup: 1000
+        runAsGroup: 1000
+        runAsNonRoot: true
+        runAsUser: 1000
+      serviceAccountName: default
+      terminationGracePeriodSeconds: 5
+      volumes:
+      - name: publickey
+        secret:
+          items:
+          - key: jwtRS256.key.pub
+            path: publickey
+          secretName: jwt-key
+      - emptyDir: {}
+        name: tmp
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: balancereader
+  namespace: default
+spec:
+  ports:
+  - name: http
+    port: 8080
+    targetPort: 8080
+  selector:
+    app: balancereader
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: contacts
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: contacts
+  template:
+    metadata:
+      labels:
+        app: contacts
+    spec:
+      containers:
+      - env:
+        - name: VERSION
+          value: dev
+        - name: PORT
+          value: "8080"
+        - name: ENABLE_TRACING
+          value: "true"
+        - name: LOG_LEVEL
+          value: info
+        envFrom:
+        - configMapRef:
+            name: environment-config
+        - configMapRef:
+            name: accounts-db-config
+        image: edenfed/contacts:f5f76ca@sha256:86a593d87276dc9157b89c41369f9b32f4955e85136b9566acc11549b7d9030d
+        name: contacts
+        resources:
+          limits:
+            cpu: 250m
+            memory: 128Mi
+          requests:
+            cpu: 100m
+            memory: 64Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - all
+          privileged: false
+          readOnlyRootFilesystem: true
+        volumeMounts:
+        - mountPath: /tmp/.ssh
+          name: publickey
+          readOnly: true
+        - mountPath: /tmp
+          name: tmp
+      securityContext:
+        fsGroup: 1000
+        runAsGroup: 1000
+        runAsNonRoot: true
+        runAsUser: 1000
+      serviceAccountName: default
+      terminationGracePeriodSeconds: 5
+      volumes:
+      - name: publickey
+        secret:
+          items:
+          - key: jwtRS256.key.pub
+            path: publickey
+          secretName: jwt-key
+      - emptyDir: {}
+        name: tmp
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: contacts
+  namespace: default
+spec:
+  ports:
+  - name: http
+    port: 8080
+    targetPort: 8080
+  selector:
+    app: contacts
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ledgerwriter
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: ledgerwriter
+  template:
+    metadata:
+      labels:
+        app: ledgerwriter
+    spec:
+      containers:
+      - env:
+        - name: VERSION
+          value: dev
+        - name: PORT
+          value: "8080"
+        - name: ENABLE_TRACING
+          value: "true"
+        - name: ENABLE_METRICS
+          value: "true"
+        - name: JVM_OPTS
+          value: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap
+            -Xms256m -Xmx512m
+        - name: LOG_LEVEL
+          value: info
+        - name: NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        envFrom:
+        - configMapRef:
+            name: environment-config
+        - configMapRef:
+            name: service-api-config
+        - configMapRef:
+            name: ledger-db-config
+        image: edenfed/ledgerwriter:f5f76ca-dirty@sha256:24f2464747ebd8b85641f45585fac24b34708681ab7cc25767be92eb0ff7d7d7
+        name: ledgerwriter
+        resources:
+          limits:
+            cpu: 500m
+            memory: 512Mi
+          requests:
+            cpu: 100m
+            memory: 256Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - all
+          privileged: false
+          readOnlyRootFilesystem: true
+        volumeMounts:
+        - mountPath: /tmp/.ssh
+          name: publickey
+          readOnly: true
+        - mountPath: /tmp
+          name: tmp
+      securityContext:
+        fsGroup: 1000
+        runAsGroup: 1000
+        runAsNonRoot: true
+        runAsUser: 1000
+      serviceAccountName: default
+      terminationGracePeriodSeconds: 5
+      volumes:
+      - name: publickey
+        secret:
+          items:
+          - key: jwtRS256.key.pub
+            path: publickey
+          secretName: jwt-key
+      - emptyDir: {}
+        name: tmp
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ledgerwriter
+  namespace: default
+spec:
+  ports:
+  - name: http
+    port: 8080
+    targetPort: 8080
+  selector:
+    app: ledgerwriter
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: transactionhistory
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: transactionhistory
+  template:
+    metadata:
+      labels:
+        app: transactionhistory
+    spec:
+      containers:
+      - env:
+        - name: VERSION
+          value: dev
+        - name: PORT
+          value: "8080"
+        - name: ENABLE_TRACING
+          value: "true"
+        - name: ENABLE_METRICS
+          value: "true"
+        - name: POLL_MS
+          value: "100"
+        - name: CACHE_SIZE
+          value: "1000"
+        - name: CACHE_MINUTES
+          value: "60"
+        - name: HISTORY_LIMIT
+          value: "100"
+        - name: JVM_OPTS
+          value: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap
+            -Xms256m -Xmx512m
+        - name: LOG_LEVEL
+          value: info
+        - name: NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        envFrom:
+        - configMapRef:
+            name: environment-config
+        - configMapRef:
+            name: ledger-db-config
+        image: edenfed/transactionhistory:f5f76ca-dirty@sha256:94640f5d3ad5dcffe5898898e27516e01dcff8dab37cc5ebaa657379788ebfd1
+        name: transactionhistory
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 8080
+        resources:
+          limits:
+            cpu: 500m
+            memory: 512Mi
+          requests:
+            cpu: 100m
+            memory: 256Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - all
+          privileged: false
+          readOnlyRootFilesystem: true
+        volumeMounts:
+        - mountPath: /tmp/.ssh
+          name: publickey
+          readOnly: true
+        - mountPath: /tmp
+          name: tmp
+      securityContext:
+        fsGroup: 1000
+        runAsGroup: 1000
+        runAsNonRoot: true
+        runAsUser: 1000
+      serviceAccountName: default
+      terminationGracePeriodSeconds: 5
+      volumes:
+      - name: publickey
+        secret:
+          items:
+          - key: jwtRS256.key.pub
+            path: publickey
+          secretName: jwt-key
+      - emptyDir: {}
+        name: tmp
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: transactionhistory
+  namespace: default
+spec:
+  ports:
+  - name: http
+    port: 8080
+    targetPort: 8080
+  selector:
+    app: transactionhistory
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: userservice
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: userservice
+  template:
+    metadata:
+      labels:
+        app: userservice
+    spec:
+      containers:
+      - env:
+        - name: VERSION
+          value: dev
+        - name: PORT
+          value: "8080"
+        - name: ENABLE_TRACING
+          value: "true"
+        - name: TOKEN_EXPIRY_SECONDS
+          value: "3600"
+        - name: PRIV_KEY_PATH
+          value: /tmp/.ssh/privatekey
+        - name: LOG_LEVEL
+          value: info
+        envFrom:
+        - configMapRef:
+            name: environment-config
+        - configMapRef:
+            name: accounts-db-config
+        image: edenfed/userservice:f5f76ca@sha256:ccc9b9474f6de8de5b4329eb0ec0d9f5b78c68ba7bf34bc9c8b68219e2e0031a
+        name: userservice
+        ports:
+        - containerPort: 8080
+          name: http-server
+        resources:
+          limits:
+            cpu: 500m
+            memory: 256Mi
+          requests:
+            cpu: 200m
+            memory: 64Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - all
+          privileged: false
+          readOnlyRootFilesystem: true
+        volumeMounts:
+        - mountPath: /tmp/.ssh
+          name: keys
+          readOnly: true
+        - mountPath: /tmp
+          name: tmp
+      securityContext:
+        fsGroup: 1000
+        runAsGroup: 1000
+        runAsNonRoot: true
+        runAsUser: 1000
+      serviceAccountName: default
+      terminationGracePeriodSeconds: 5
+      volumes:
+      - name: keys
+        secret:
+          items:
+          - key: jwtRS256.key
+            path: privatekey
+          - key: jwtRS256.key.pub
+            path: publickey
+          secretName: jwt-key
+      - emptyDir: {}
+        name: tmp
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: userservice
+  namespace: default
+spec:
+  ports:
+  - name: http
+    port: 8080
+    targetPort: 8080
+  selector:
+    app: userservice
+  type: ClusterIP
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - env:
+        - name: VERSION
+          value: dev
+        - name: PORT
+          value: "8080"
+        - name: ENABLE_TRACING
+          value: "true"
+        - name: SCHEME
+          value: http
+        - name: LOG_LEVEL
+          value: info
+        - name: DEFAULT_USERNAME
+          valueFrom:
+            configMapKeyRef:
+              key: DEMO_LOGIN_USERNAME
+              name: demo-data-config
+        - name: DEFAULT_PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              key: DEMO_LOGIN_PASSWORD
+              name: demo-data-config
+        envFrom:
+        - configMapRef:
+            name: environment-config
+        - configMapRef:
+            name: service-api-config
+        image: edenfed/frontend:f5f76ca@sha256:2e5e851ea5ac5f8226bb122d5d3bca7a957b7432cc102da7737cb34c4881cf73
+        name: front
+        resources:
+          limits:
+            cpu: 250m
+            memory: 128Mi
+          requests:
+            cpu: 100m
+            memory: 64Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - all
+          privileged: false
+          readOnlyRootFilesystem: true
+        volumeMounts:
+        - mountPath: /tmp/.ssh
+          name: publickey
+          readOnly: true
+        - mountPath: /tmp
+          name: tmp
+      securityContext:
+        fsGroup: 1000
+        runAsGroup: 1000
+        runAsNonRoot: true
+        runAsUser: 1000
+      serviceAccountName: default
+      terminationGracePeriodSeconds: 5
+      volumes:
+      - name: publickey
+        secret:
+          items:
+          - key: jwtRS256.key.pub
+            path: publickey
+          secretName: jwt-key
+      - emptyDir: {}
+        name: tmp
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  namespace: default
+spec:
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8080
+  selector:
+    app: frontend
+  type: LoadBalancer
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    odigos.io/skip: "true"
+  name: loadgenerator
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: loadgenerator
+  template:
+    metadata:
+      annotations:
+        sidecar.istio.io/rewriteAppHTTPProbers: "true"
+      labels:
+        app: loadgenerator
+    spec:
+      containers:
+      - env:
+        - name: FRONTEND_ADDR
+          value: frontend:80
+        - name: USERS
+          value: "5"
+        - name: LOG_LEVEL
+          value: error
+        image: edenfed/loadgenerator:f5f76ca@sha256:c64e3af89feb046b0931a09d11a24855a61c2bbe712301cb67ad7e3020d6eba6
+        name: loadgenerator
+        resources:
+          limits:
+            cpu: 250m
+            memory: 1Gi
+          requests:
+            cpu: 100m
+            memory: 512Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - all
+          privileged: false
+          readOnlyRootFilesystem: true
+      restartPolicy: Always
+      securityContext:
+        fsGroup: 1000
+        runAsGroup: 1000
+        runAsNonRoot: true
+        runAsUser: 1000
+      serviceAccountName: default
+      terminationGracePeriodSeconds: 5
